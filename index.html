@@ -941,15 +941,26 @@
                 saveData(updatedPlayers, finances, undefined, matchHistory);
             };
 
-            const generateWhatsAppList = (isEmpty = false) => {
-                const today = new Date();
-                const nextMonday = new Date();
-                // Calcula dias até a próximo segunda-feira. Se hoje for segunda-feira, pega o próximo (daqui a 7 dias)
-                let daysUntilMonday = (6 - today.getDay() + 7) % 7;
-                if (daysUntilMonday === 0) daysUntilMonday = 7; 
-                
-                nextmonday.setDate(today.getDate() + daysUntilMonday);
-                const dateStr = nextMonday.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+           
+const generateWhatsAppList = (isEmpty = false) => {
+    const today = new Date();
+    const nextMonday = new Date(today);
+
+    // Calcula os dias até a próxima segunda-feira
+    let daysUntilMonday = (1 - today.getDay() + 7) % 7;
+
+    // Se hoje for segunda-feira, considera a próxima semana
+    if (daysUntilMonday === 0) {
+        daysUntilMonday = 7;
+    }
+
+    nextMonday.setDate(today.getDate() + daysUntilMonday);
+
+    const dateStr = nextMonday.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit'
+    });
+
                 
                 const activePlayers = isEmpty 
                     ? players.filter(p => !p.isGoalkeeper && !p.isPunished && (p.type === 'mensalista' || (p.role === 'commission' && isPlayerConfirmed(p))))
