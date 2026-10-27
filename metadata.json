@@ -1,0 +1,5 @@
+{
+  "name": "Baba Gostosinho",
+  "description": "Organizador de Baba (futebol casual) com gestão de membros, financeiro e sorteio de times equilibrados.",
+  "requestFramePermissions": ["web-share"]
+}
