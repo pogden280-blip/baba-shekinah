@@ -944,7 +944,7 @@
             const generateWhatsAppList = (isEmpty = false) => {
                 const today = new Date();
                 const nextSaturday = new Date();
-                // Calcula dias até o próximo sábado. Se hoje for sábado, pega o próximo (daqui a 7 dias)
+                // Calcula dias até a próximo segunda-feira. Se hoje for segunda-feira, pega o próximo (daqui a 7 dias)
                 let daysUntilSaturday = (6 - today.getDay() + 7) % 7;
                 if (daysUntilSaturday === 0) daysUntilSaturday = 7; 
                 
@@ -4861,7 +4861,7 @@
                                             <textarea 
                                                 value={tempHighlight.message}
                                                 onChange={(e) => setTempHighlight({...tempHighlight, message: e.target.value})}
-                                                placeholder={showHighlightModal === 'timeDaSemana' ? "Ex: Elenco que dominou o baba de sábado!" : "Ex: Parabéns pelo desempenho absurdo!"}
+                                                placeholder={showHighlightModal === 'timeDaSemana' ? "Ex: Elenco que dominou o baba de segunda!" : "Ex: Parabéns pelo desempenho absurdo!"}
                                                 rows="3"
                                                 className="w-full bg-zinc-50 border border-zinc-200 rounded-2xl py-4 px-5 focus:outline-none focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 transition-all font-medium text-sm"
                                             ></textarea>
