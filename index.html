@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baba Gostosinho</title>
+    <title>Baba shekinah</title>
     <!-- Tailwind CSS 3 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- React & ReactDOM CDN -->
@@ -61,8 +61,8 @@
         }
 
         // Configurações do JSONbin
-        const BIN_ID = '69af06d2ae596e708f71a0ef';
-        const MASTER_KEY = '$2a$10$RxtN.VwYLRsGcmoCji08oeL2di9W0D4tyrBZe/vIV77N665ALQ9Vi';
+        const BIN_ID = '6ae099a8ffd5d160538fb73d';
+        const MASTER_KEY = '$2a$10$WPHlXuS5GwSz82pjAZP0DunrxGLIm./nqfJYNOk0R8GEX/i0N7yyi';
         const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
         // Componente de Ícone Lucide (Wrapper para CDN)
@@ -722,7 +722,7 @@
                 }
 
                 // Check admin password
-                const authorizedPasswords = ["Dan2620", "Davi2168"];
+                const authorizedPasswords = ["guga26"];
                 const commissionMember = players.find(p => p.role === 'commission' && p.password === adminPasswordInput);
                 
                 if (authorizedPasswords.includes(adminPasswordInput) || commissionMember) {
@@ -968,13 +968,13 @@
                 };
 
                 let listText = `*⚽💨💨🏃🏻LISTA DO BABA GOSTOSINHO*\n\n`;
-                listText += `*${dateStr} - Sábado* ⚽🏆 15:30 da tarde*\n\n`;
+                listText += `*${dateStr} - Segunda* ⚽🏆 20:00 da noite*\n\n`;
                 listText += `*CHAVE PIX:*\n\n`;
-                listText += `069.237.535-03\n\n`;
-                listText += `*Davi da Silva Araújo*\n`;
+                listText += `75467402153\n\n`;
+                listText += `*Paulo Gustavo Fernandes de Morais*\n`;
                 listText += `*Valor: 8,00R$*\n`;
                 listText += `*Mensal: 26,00R$*\n\n`;
-                listText += `*por o nome na lista e efetuar o pagamento ate sexta 20:00*\n`;
+                listText += `*por o nome na lista e efetuar o pagamento ate segunda 18:00*\n`;
                 listText += `Jogador sem pagamento é bloqueado pelo app automaticamente e não entra no sorteio.*\n\n`;
 
                 for (let i = 1; i <= 24; i++) {
@@ -997,14 +997,13 @@
                     listText += `${i}- ${p ? p.name : ''}\n`;
                 }
 
-                listText += `\n*LISTA DE PUNIDOS - R$ 15,00*\n`;
+                listText += `\n*LISTA DE PUNIDOS - R$ 14,00*\n`;
                 for (let i = 1; i <= 3; i++) {
                     const p = punished[i-1];
                     listText += `${i}- ${p ? `${p.name} (${p.punishmentCount} babas)` : ''}\n`;
                 }
 
                 listText += `\n*OBS: LIMITE MÁXIMO DE 4 TIMES*\n`;
-                listText += `⚠️ *OBRIGATÓRIO COLETES AZUL E VERMELHO ⚠️*`;
 
                 if (isEmpty) {
                     window.open(`https://wa.me/?text=${encodeURIComponent(listText)}`, '_blank');
@@ -1020,7 +1019,7 @@
                     return;
                 }
 
-                let text = `⚽ *SORTEIO REALIZADO - BABA GOSTOSINHO* ⚽\n\n`;
+                let text = `⚽ *SORTEIO REALIZADO - BABA SHEKINAH* ⚽\n\n`;
                 
                 teams.forEach((team, idx) => {
                     text += `${idx === 0 ? '🟢' : idx === 1 ? '⚫' : idx === 2 ? '🔵' : '🔴'} *${team.name}*\n`;
@@ -1080,7 +1079,7 @@
                 let totalIncome = 0;
                 let totalExpense = 0;
                 
-                let text = `📊 *LEVANTAMENTO FINANCEIRO - BABA GOSTOSINHO* 📊\n`;
+                let text = `📊 *LEVANTAMENTO FINANCEIRO - BABA SHEKINAH* 📊\n`;
                 if (filterStartDate && filterEndDate) {
                     text += `📅 Período: ${new Date(filterStartDate + 'T00:00:00').toLocaleDateString('pt-BR')} até ${new Date(filterEndDate + 'T00:00:00').toLocaleDateString('pt-BR')}\n`;
                 }
@@ -1631,7 +1630,7 @@
                     else winnerText = `🏆 *Campeão:* ${winners[0][0]}`;
                 }
 
-                let text = `⚽ *RESUMO DO BABA GOSTOSINHO* ⚽\n\n${winnerText}\n\n`;
+                let text = `⚽ *RESUMO DO BABA SHEKINAH* ⚽\n\n${winnerText}\n\n`;
                 
                 text += `📊 *CLASSIFICAÇÃO:*\n`;
                 sortedStats.forEach(([name, s]) => {
@@ -1822,12 +1821,12 @@
                 const t2 = teams[currentMatchTeams[1]];
                 if (!t1 || !t2) return;
 
-                const text = `⚽ *Baba gostosinho - Resumo da Partida* ⚽\n\n` +
+                const text = `⚽ *Baba Shekinah - Resumo da Partida* ⚽\n\n` +
                     `Placar: ${t1.name} ${t1.score} x ${t2.score} ${t2.name}\n` +
                     `Tempo: ${formatTime(timerSeconds)}\n\n` +
                     `*${t1.name}:* ${t1.players.map(p => p.name).join(', ')}\n` +
                     `*${t2.name}:* ${t2.players.map(p => p.name).join(', ')}\n\n` +
-                    `Organizado via Baba gostosinho!`;
+                    `Organizado via Baba shekinah!`;
 
                 if (navigator.share) {
                     navigator.share({ text });
@@ -3400,7 +3399,7 @@
                                                             {/* Card Footer Watermark */}
                                                             <div className="pt-4 border-t border-zinc-800/80 text-center flex items-center justify-center gap-1.5">
                                                                 <Icon name="zap" size={12} className="text-emerald-500 animate-pulse" />
-                                                                <span className="text-[9px] text-zinc-500 font-bold tracking-widest uppercase">BABA GOSTOSINHO APP</span>
+                                                                <span className="text-[9px] text-zinc-500 font-bold tracking-widest uppercase">BABA SHEKINAH APP</span>
                                                             </div>
                                                         </div>
                                                     </div>
