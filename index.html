@@ -943,13 +943,13 @@
 
             const generateWhatsAppList = (isEmpty = false) => {
                 const today = new Date();
-                const nextSaturday = new Date();
+                const nextMonday = new Date();
                 // Calcula dias até a próximo segunda-feira. Se hoje for segunda-feira, pega o próximo (daqui a 7 dias)
-                let daysUntilSaturday = (6 - today.getDay() + 7) % 7;
-                if (daysUntilSaturday === 0) daysUntilSaturday = 7; 
+                let daysUntilMonday = (6 - today.getDay() + 7) % 7;
+                if (daysUntilmonday === 0) daysUntilmonday = 7; 
                 
-                nextSaturday.setDate(today.getDate() + daysUntilSaturday);
-                const dateStr = nextSaturday.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+                nextmonday.setDate(today.getDate() + daysUntilmonday);
+                const dateStr = nextmonday.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
                 
                 const activePlayers = isEmpty 
                     ? players.filter(p => !p.isGoalkeeper && !p.isPunished && (p.type === 'mensalista' || (p.role === 'commission' && isPlayerConfirmed(p))))
